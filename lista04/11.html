@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos filhos: <input id="inputFilho" type="text"><br>
+    <button onclick="verificar()">Analisar família</button>
+    <div id="divMsg"></div>
+</body>
+
+    <script>
+        function verificar() {
+            var filhos = Number(inputFilho.value);
+            if(filhos >= 1) {
+                divMsg.innerHTML += `Não tem TV <br>`
+            }
+            if(filhos >= 2) {
+                divMsg.innerHTML += `Não tem internet <br> `
+            }
+            if(filhos >= 3) {
+                divMsg.innerHTML += ` Não tem video game <br>`
+            }
+            if(filhos >= 4) {
+                divMsg.innerHTML += `Não tem Netflix `
+            }
+        }
+    </script>
+</html>

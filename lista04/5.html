@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira KWh consumida no mês: <br>
+    <input type="text" id="inputKwh">
+    <button onclick="verificar()">Calcular conta de luz</button>
+</body>
+<script>
+    function verificar() {
+        var kwh = Number(inputKwh.value);
+        var preco = kwh * 0.85;
+
+        if (kwh < 100) {
+            preco = preco * 0.9;
+            alert('Valor da conta R$'+preco);
+        }
+
+        if (kwh > 100) {
+            alert('Valor da conta R$'+preco);
+        }
+    }
+</script>
+</html>

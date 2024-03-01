@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantas latinhas bebe por dia: <br>
+    <input type="text" id="inputLata">
+    <button onclick="verificar()">Quantos refris?</button>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function verificar() {
+        var lata = Number(inputLata.value);
+        var total = lata * 365;
+
+        if (total < 500){
+            divMsg.innerHTML = `Você bebe ${total} latinhas por ano!`
+        }
+
+        if(total >= 500) {
+            divMsg.innerHTML = "Cuidado com a diabetes!";
+        }
+    }
+</script>
+</html>

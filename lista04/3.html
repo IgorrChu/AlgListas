@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira uma nota: <br>
+    <input type="text" id="inputN1"><br>
+    Insira uma nota: <br>
+    <input type="text" id="inputN2"><br>
+    Insira uma nota: <br>
+    <input type="text" id="inputN3"><br>
+    <button onclick="verificar()">Analisar Desempenho</button>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function verificar() {
+        var n1 = Number(inputN1.value);
+        var n2 = Number(inputN2.value);
+        var n3 = Number(inputN3.value);
+        var media = (n1 + n2 +n3)/3;
+
+        if(media < 9.4) {
+            divMsg.innerHTML = `Sua média foi de ${media}`
+        }
+
+        if (media >= 9.4) {
+            divMsg.innerHTML = `Parabéns, você é fora de série!`
+        }
+    }
+</script>
+</html>

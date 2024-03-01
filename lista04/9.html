@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o nome da serie: <input id="inputSerie" type="text"><br>
+    Quantos episodios ela tem: <input id="inputEp" type="text"><br>
+    <button onclick="verificar()">Verificar nível</button>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function verificar() {
+        var serie = inputSerie.value;
+        var ep = Number(inputEp.value);
+        var horasTotal = (ep * 22) / 60;
+
+        if(horasTotal > 30) {
+            divMsg.innerHTML = `Uau, você realmente gosta dessa série!`
+        }else{
+            divMsg.innerHTML = `Vejo que você gosta da série ${serie}`
+        }
+    }
+</script>
+
+</html>
